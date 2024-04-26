@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>HenryLand</title>
+	<link rel="stylesheet" href="css/style_dashboard.css">
+</head>
+<body>
+
+	 <audio id="backgroundMusic" loop>
+        <source src="audios/sua_musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <button id="muteButton" style="position: fixed; right: 10px; bottom: 10px; z-index: 1000;">Mute</button>
+	
+    <div class="header">
+	
+		<div class="overlay"></div>
+        <div class="content">
+            <img src="login-icon.png" alt="Login" class="login-icon"> <!-- Substitua pela URL do ícone de login -->
+            <h1>Henry Land</h1>
+        </div>
+    </div>
+	
+	<header>
+        <nav>
+            <ul>
+                <li><a href="#bemVindo">Bem-vindo</a></li>
+                <li><a href="#listaTarefas">Lista de Tarefas</a></li>
+                <li><a href="#lojinha">Lojinha</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<section id="bemVindo">
+		
+		<div id="welcomeContainer" class="slide-in">
+			<h1 class="slide-in">Bem-vindo</h1>
+			<p class="styled-text">Este site foi especialmente desenvolvido para acompanhar e recompensar as jornadas diárias do Henry em suas tarefas. Aqui, cada missão concluída é uma oportunidade de aprender e se divertir, abrangendo áreas tão diversas quanto história e matemática, além de atividades como brincar, desenhar, ler e jogar.
+
+        Ao completar cada tarefa, o Henry ganha moedas de ouro. Essas moedas não são apenas símbolos de suas conquistas, mas também a chave para desbloquear prêmios incríveis na nossa Lojinha. Com uma quantidade específica de moedas, ele poderá trocá-las por itens selecionados que promovem ainda mais o aprendizado e a diversão.
+
+        Prepare-se para uma aventura educativa onde cada passo à frente é uma nova descoberta. Divirta-se e aprenda, acumulando recompensas que fazem cada esforço valer a pena!</p>
+		</div>
+	</section>
+
+    <section id="listaTarefas">
+        <div id="welcomeContainer" class="slide-in">
+			<h1 class="slide-in">Tarefas</h1>
+			<p>Em construção</p>
+		</div>
+    </section>
+
+    <section id="lojinha">
+        <h2>Lojinha</h2>
+        <p>Aqui você pode comprar acessórios e jogos para o Henry!</p>
+    </section>
+
+    <footer>
+        <p>© 2024 HenryLand. Todos os direitos reservados.</p>
+    </footer>
+
+<script src="../tarefashenry/scripts/audios.js"></script> <!-- Seu arquivo JavaScript -->
+<script src="../tarefashenry/scripts/navigation.js"></script> <!-- Adicione este novo script para a navegação suave -->
+<script src="../tarefashenry/scripts/bemvindo.js"></script>
+</body>
+</html>

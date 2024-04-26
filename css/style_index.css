@@ -1,0 +1,162 @@
+/* Definições de @font-face */
+        @font-face {
+            font-family: 'Cute Dino';
+            src: url('../fonts/CuteDino.otf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Super Mario 256';
+            src: url('../fonts/SuperMario256.ttf') format('truetype');
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #89CFF0; /* Azul Claro */
+        }
+		
+		.photos-container {
+            position: absolute;
+            top: 30%; /* Ajuste conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            width: 80%; /* Ajuste a largura conforme necessário */
+            justify-content: space-between;
+            animation: riseUp 3s forwards;
+        }
+        .photo {
+            width: 100px; /* Ajuste conforme o tamanho desejado */
+            height: 100px; /* Mantenha a proporção conforme o necessário */
+            background-color: #ddd; /* Placeholder para fotos */
+			background-size: cover; /* Garante que a imagem cubra todo o espaço do elemento */
+			background-position: center; /* Centraliza a imagem no elemento */
+            border-radius: 50%; /* Círculo */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transform: scale(0); /* Inicia reduzido */
+			animation: fadeInPhoto 1.5s forwards; /* Animação para fazer aparecer */
+        }
+        .photo:nth-child(1) {
+    animation: fadeInPhoto 1.5s forwards;
+    animation-delay: 0.5s; /* Delays para criar efeito escalonado */
+    transform-origin: center; /* Origem da transformação para rotação */
+}
+
+.photo:nth-child(2) {
+    animation: fadeInPhoto 1.5s forwards;
+    animation-delay: 1s; /* Aumenta o delay para o segundo foto */
+    transform-origin: center;
+}
+
+.photo:nth-child(3) {
+    animation: fadeInPhoto 1.5s forwards;
+    animation-delay: 1.5s; /* Aumenta o delay para o terceiro foto */
+    transform-origin: center;
+}
+
+@keyframes rotate {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+@keyframes fadeInPhoto {
+    0% { transform: scale(0); } /* Começa de 0 */
+    50% { transform: scale(1.1); } /* Cresce um pouco mais que o normal */
+    100% { transform: scale(1); } /* Volta ao tamanho normal */
+}
+
+        @keyframes riseUp {
+            0% { top: 50%; }
+            100% { top: 30%; }
+        }
+		
+        .welcome-message {
+            font-family: 'Cute Dino', Arial, sans-serif;
+			position: absolute;
+            animation: dropDown 3s forwards, swing 5s infinite;
+            text-align: center;
+			color: #0056B3;
+			
+        }
+		
+		@keyframes dropDown {
+            0% {
+                top: -100px;
+            }
+            100% {
+                top: 15%; /* Posição final ajustada para simular um balanço */
+            }
+        }
+		@keyframes levelUp {
+            0% {
+                bottom: -100vh;
+            }
+            100% {
+                bottom: 5%; /* Posição final ajustada para simular um balanço */
+            }
+        }
+        @keyframes swing {
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+		 @keyframes appear {
+            0% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1); }
+        }
+        .line {
+            display: block;
+            font-size: 24px;
+            margin: 5px 0;
+        }
+        .small {
+            font-size: 18px;
+            color: #555;
+        }
+        .highlight {
+            font-family: 'Super Mario 256', Arial, sans-serif;
+            font-size: 24px;
+            color: #007BFF;
+        }
+        .enter-button {
+			opacity: 0; /* Inicia invisível */
+            animation: appear 1s forwards 3s; /* Aparece após 3 segundos, conforme duração de dropDown */
+			position: absolute;
+            top: 50%; /* Centralizado verticalmente no meio */
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            padding: 10px 50px;
+			font-size: 24px;
+            color: white;
+            background-color: #2E8B57; /* Verde Água */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+.quote-container {
+	position: absolute;
+	bottom: 10%;
+	width: 80%;
+	text-align: center;
+	font-size: 16px;
+	color: #0056B3;
+	animation: levelUp 3s forwards;
+}
+
+#quoteImage {
+	width: 100px; 
+	height: 100px; 
+	border-radius: 50%; 
+	margin-top: 10px;
+}
